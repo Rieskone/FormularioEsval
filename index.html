@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Postulación Licitación — Cartografía GeoGota ESVAL / Aguas del Valle 2025</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --blue:#29ABE2;   /* ESVAL celeste claro */
+  --dark:#1A8FC4;
+  --darker:#0E6FA0;
+  --mid:#4DC0E8;
+  --light:#74D0EF;
+  --accent:#00D4FF;
+  --green:#00A650;
+  --bg:#EEF8FD;
+  --surface:#fff;
+  --border:#AADCF0;
+  --border-lt:#CBE9F6;
+  --text:#173040;
+  --muted:#3C7A9A;
+  --red:#C0392B;
+  --warn:#D4820A;
+  --nav-h:54px;
+  --radius:10px;
+  --shadow:0 2px 16px rgba(0,80,130,.07);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text);font-size:15px;line-height:1.55;}
+
+/* ══ HEADER ══════════════════════════════════ */
+.hdr{background:linear-gradient(130deg,var(--darker) 0%,var(--dark) 45%,var(--blue) 80%,var(--mid) 100%);position:relative;overflow:hidden;}
+.hdr::before{content:'';position:absolute;width:420px;height:420px;top:-120px;right:-100px;border-radius:50%;background:rgba(0,197,240,.12);pointer-events:none;}
+.hdr::after{content:'';position:absolute;width:240px;height:240px;bottom:-60px;left:6%;border-radius:50%;background:rgba(0,197,240,.08);pointer-events:none;}
+.hdr-inner{position:relative;z-index:1;max-width:940px;margin:0 auto;padding:36px 28px 34px;display:flex;gap:24px;align-items:flex-start;}
+.logo{flex-shrink:0;background:#fff;border-radius:10px;padding:10px 16px 9px;box-shadow:0 4px 22px rgba(0,0,0,.2);text-align:center;}
+.logo-name{font-family:'Barlow Condensed',sans-serif;font-size:27px;font-weight:700;color:var(--blue);letter-spacing:1.5px;line-height:1;}
+.logo-adv{font-size:9.5px;font-weight:600;color:var(--green);letter-spacing:1.6px;text-transform:uppercase;margin-top:4px;}
+.hdr-text h1{font-family:'Barlow Condensed',sans-serif;font-size:clamp(18px,3.4vw,26px);font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.4px;line-height:1.2;}
+.hdr-text p{margin-top:8px;font-size:13.5px;color:rgba(255,255,255,.82);line-height:1.55;}
+.badges{margin-top:13px;display:flex;flex-wrap:wrap;gap:8px;}
+.badge{display:inline-flex;align-items:center;gap:5px;padding:4px 13px;border-radius:20px;font-size:11.5px;font-weight:600;letter-spacing:.3px;}
+.b1{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.28);color:#fff;}
+.b2{background:rgba(0,197,240,.2);border:1px solid rgba(0,197,240,.35);color:#cdf5ff;}
+.b3{background:rgba(0,166,80,.22);border:1px solid rgba(0,166,80,.38);color:#ccf0dc;}
+
+/* ══ STICKY NAV ══════════════════════════════ */
+.snav{position:sticky;top:0;z-index:100;background:var(--darker);box-shadow:0 3px 14px rgba(0,0,0,.22);}
+.snav-inner{max-width:940px;margin:0 auto;padding:0 12px;display:flex;align-items:stretch;height:var(--nav-h);}
+.ns{flex:1;display:flex;align-items:center;justify-content:center;gap:7px;cursor:pointer;border-bottom:3px solid transparent;transition:background .2s,border-color .2s;padding:0 2px;text-decoration:none;color:rgba(255,255,255,.42);}
+.ns:hover{background:rgba(255,255,255,.06);color:rgba(255,255,255,.82);}
+.ns.active{border-bottom-color:var(--accent);color:#fff;}
+.ns.done{color:rgba(255,255,255,.65);}
+.ns.done .nsn{background:var(--green);}
+.ns.active .nsn{background:var(--accent);}
+.nsn{width:23px;height:23px;border-radius:50%;background:rgba(255,255,255,.14);font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s;}
+.nsl{font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;white-space:nowrap;}
+@media(max-width:580px){.nsl{display:none;}.ns{gap:0;}}
+
+/* ══ MAIN ════════════════════════════════════ */
+main{max-width:940px;margin:28px auto 70px;padding:0 14px;}
+
+/* ══ CARD ════════════════════════════════════ */
+.card{background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);box-shadow:var(--shadow);margin-bottom:22px;overflow:hidden;scroll-margin-top:calc(var(--nav-h) + 12px);}
+.chdr{background:linear-gradient(90deg,var(--dark),var(--blue));padding:13px 22px;display:flex;align-items:center;gap:12px;}
+.cico{width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;}
+.ctitle{font-family:'Barlow Condensed',sans-serif;font-size:15.5px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:.5px;}
+.csub{font-size:11.5px;color:rgba(255,255,255,.75);margin-top:1px;}
+.cbody{padding:24px 22px;}
+
+/* ══ GRID ════════════════════════════════════ */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;}
+.span2{grid-column:span 2;}
+@media(max-width:640px){.g2,.g3{grid-template-columns:1fr;}.span2{grid-column:span 1;}.hdr-inner{flex-direction:column;}}
+
+/* ══ FIELDS ══════════════════════════════════ */
+.f{display:flex;flex-direction:column;gap:5px;}
+.mt{margin-top:18px;}
+label.lbl{font-size:11.5px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.55px;}
+.req{color:var(--red);margin-left:2px;}
+input[type=text],input[type=email],input[type=tel],input[type=url],input[type=date],select,textarea{
+  width:100%;padding:10px 13px;border:1.5px solid var(--border);border-radius:8px;
+  font-family:'Barlow',sans-serif;font-size:14.5px;color:var(--text);background:#F6FBFF;
+  transition:border-color .18s,box-shadow .18s;outline:none;-webkit-appearance:none;}
+input:focus,select:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(0,131,201,.12);background:#fff;}
+input.err,select.err,textarea.err{border-color:var(--red);box-shadow:0 0 0 3px rgba(192,57,43,.09);}
+textarea{resize:vertical;min-height:100px;}
+select{cursor:pointer;}
+.hint{font-size:11px;color:var(--muted);margin-top:2px;line-height:1.4;}
+.errmsg{font-size:11px;color:var(--red);margin-top:2px;display:none;}
+.errmsg.show{display:block;}
+
+/* prefix $ */
+.pfx{position:relative;}
+.pfx-s{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-weight:700;color:var(--muted);pointer-events:none;}
+.pfx input{padding-left:28px!important;}
+
+/* ══ PILLS ═══════════════════════════════════ */
+.pg{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px;}
+.pill{display:inline-flex;align-items:center;gap:7px;padding:7px 13px;border:1.5px solid var(--border);border-radius:8px;cursor:pointer;background:#F6FBFF;font-size:13.5px;transition:all .18s;user-select:none;}
+.pill:hover{border-color:var(--blue);background:#e6f4fb;}
+.pill input{display:none;}
+.pill.on{border-color:var(--blue);background:#d9effa;color:var(--darker);font-weight:600;}
+.pd{width:15px;height:15px;border-radius:50%;border:2px solid var(--border);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:all .18s;}
+.pill.on .pd{border-color:var(--blue);background:var(--blue);}
+.pill.on .pd::after{content:'';width:5px;height:5px;border-radius:50%;background:#fff;}
+/* checkbox */
+.chk .pd{border-radius:4px;}
+.chk.pill.on .pd{background:var(--blue);}
+.chk.pill.on .pd::after{content:'✓';font-size:9px;color:#fff;width:auto;height:auto;border-radius:0;background:none;}
+
+/* ══ FILE UPLOAD ═════════════════════════════ */
+.upload{border:2px dashed var(--border);border-radius:9px;padding:14px;text-align:center;cursor:pointer;background:#F6FBFF;transition:all .2s;}
+.upload:hover{border-color:var(--blue);background:#e6f4fb;}
+.upload input{display:none;}
+.up-ico{font-size:22px;margin-bottom:4px;}
+.up-txt{font-size:12px;color:var(--muted);}
+.up-txt strong{color:var(--blue);}
+.fname{margin-top:6px;font-size:12px;color:var(--green);font-weight:600;display:none;}
+
+/* ══ INFO / WARN BOXES ═══════════════════════ */
+.ib{background:#E4F5FC;border-left:4px solid var(--blue);border-radius:0 8px 8px 0;padding:12px 16px;font-size:13px;color:var(--darker);line-height:1.55;margin-bottom:18px;}
+.ib strong{display:block;font-size:13.5px;margin-bottom:3px;}
+.wb{background:#FFF8ED;border-left:4px solid var(--warn);border-radius:0 8px 8px 0;padding:12px 16px;font-size:13px;color:#5c3500;line-height:1.55;margin-bottom:18px;}
+.wb strong{display:block;font-size:13.5px;margin-bottom:3px;}
+
+/* ══ SECTION SUB-HEADER ══════════════════════ */
+.sub{font-family:'Barlow Condensed',sans-serif;font-size:13.5px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.6px;border-bottom:2px solid var(--border-lt);padding-bottom:6px;margin:22px 0 14px;}
+.sub:first-child{margin-top:0;}
+
+/* ══ METHODOLOGY STEPS ════════════════════════ */
+.meto-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media(max-width:640px){.meto-grid{grid-template-columns:1fr;}}
+.meto-card{border:1.5px solid var(--border-lt);border-radius:9px;padding:16px 18px;background:#F6FBFF;position:relative;}
+.meto-card::before{content:attr(data-num);position:absolute;top:12px;right:14px;font-family:'Barlow Condensed',sans-serif;font-size:28px;font-weight:700;color:var(--border);line-height:1;}
+.meto-tag{display:inline-flex;align-items:center;gap:6px;font-family:'Barlow Condensed',sans-serif;font-size:12.5px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px;}
+.meto-tag .ico{font-size:16px;}
+.meto-card textarea{font-size:13.5px;min-height:110px;background:#fff;}
+.meto-card .hint{font-size:10.5px;}
+.meto-card.full{grid-column:span 2;}
+@media(max-width:640px){.meto-card.full{grid-column:span 1;}}
+
+/* ══ PERSONNEL CARDS ════════════════════════ */
+.pers-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+@media(max-width:640px){.pers-grid{grid-template-columns:1fr;}}
+.pcard{border:1.5px solid var(--border-lt);border-radius:9px;padding:16px 18px;background:#F6FBFF;}
+.pcard h4{font-size:13px;font-weight:700;color:var(--darker);margin-bottom:4px;padding-bottom:8px;border-bottom:1px solid var(--border-lt);display:flex;align-items:center;gap:6px;}
+.pcard .req-note{font-size:11px;color:var(--muted);font-weight:400;margin-bottom:10px;line-height:1.4;}
+.pcard .f+.f{margin-top:10px;}
+.pcard.full{grid-column:span 2;}
+@media(max-width:640px){.pcard.full{grid-column:span 1;}}
+/* upload inside pcard */
+.pcard .upload{padding:10px 12px;}
+.pcard .up-ico{font-size:18px;margin-bottom:3px;}
+
+/* extra personnel */
+#extra-pers-wrap .pcard{border-color:var(--border);border-style:dashed;}
+.btn-add{display:inline-flex;align-items:center;gap:8px;padding:9px 18px;background:var(--border-lt);border:1.5px solid var(--border);border-radius:8px;font-family:'Barlow',sans-serif;font-size:14px;font-weight:600;color:var(--blue);cursor:pointer;transition:all .18s;margin-top:14px;}
+.btn-add:hover{background:#d0e8f8;border-color:var(--blue);}
+.btn-remove{float:right;background:none;border:none;font-size:16px;cursor:pointer;color:var(--muted);padding:2px 6px;line-height:1;border-radius:4px;}
+.btn-remove:hover{background:#fde;color:var(--red);}
+
+/* ══ CHRONO TABLE ════════════════════════════ */
+.chrono{width:100%;border-collapse:collapse;font-size:13px;}
+.chrono th{background:var(--blue);color:#fff;font-weight:600;padding:9px 12px;text-align:left;font-size:11.5px;text-transform:uppercase;letter-spacing:.4px;}
+.chrono td{padding:8px 10px;border-bottom:1px solid var(--border-lt);vertical-align:middle;}
+.chrono tr:last-child td{border-bottom:none;}
+.chrono tr:nth-child(even) td{background:#F0F8FD;}
+.chrono td input{padding:6px 9px;font-size:13px;}
+
+/* ══ DECLARATION ═════════════════════════════ */
+.decl{display:flex;gap:12px;padding:16px;background:#EDF7F1;border:1.5px solid #9ED4B5;border-radius:9px;cursor:pointer;margin-bottom:22px;}
+.decl input{display:none;}
+.decl-box{width:22px;height:22px;border:2px solid #9ED4B5;border-radius:5px;flex-shrink:0;margin-top:2px;background:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;transition:all .2s;}
+.decl.on .decl-box{background:var(--green);border-color:var(--green);color:#fff;}
+.decl-txt{font-size:13px;line-height:1.55;color:var(--text);}
+.decl-txt strong{display:block;font-size:14px;margin-bottom:3px;}
+
+/* ══ SUBMIT ══════════════════════════════════ */
+.btn-sub{width:100%;padding:15px;background:linear-gradient(135deg,var(--dark),var(--light));color:#fff;border:none;border-radius:9px;font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all .2s;}
+.btn-sub:hover{transform:translateY(-1px);box-shadow:0 6px 24px rgba(0,131,201,.35);}
+.btn-sub:active{transform:none;}
+.btn-sub:disabled{opacity:.6;cursor:not-allowed;transform:none;box-shadow:none;}
+.spin{display:inline-block;width:16px;height:16px;border:2.5px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%;animation:sp .7s linear infinite;vertical-align:middle;margin-right:7px;}
+@keyframes sp{to{transform:rotate(360deg);}}
+
+/* ══ SUCCESS ═════════════════════════════════ */
+#success{display:none;text-align:center;padding:70px 24px;}
+.sico{font-size:60px;animation:pop .4s ease;margin-bottom:14px;}
+@keyframes pop{from{transform:scale(0);opacity:0;}to{transform:scale(1);opacity:1;}}
+#success h2{font-family:'Barlow Condensed',sans-serif;font-size:26px;font-weight:700;color:var(--darker);}
+#success p{color:var(--muted);font-size:14.5px;margin-top:6px;line-height:1.6;}
+.sref{display:inline-block;margin-top:18px;padding:10px 26px;background:#E8F4FC;border-radius:8px;font-weight:700;color:var(--blue);font-size:14px;}
+
+/* ══ FOOTER ══════════════════════════════════ */
+footer{text-align:center;padding:22px 16px;font-size:12px;color:var(--muted);border-top:1px solid var(--border);}
+footer p+p{margin-top:3px;}
+
+/* ══ TAG LABEL ═══════════════════════════════ */
+.tl{display:inline-block;font-size:10.5px;font-weight:700;padding:2px 9px;border-radius:10px;background:#D9EFF9;color:var(--blue);text-transform:uppercase;letter-spacing:.4px;margin-bottom:7px;}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="hdr">
+  <div class="hdr-inner">
+    <div class="logo">
+      <div class="logo-name">ESVAL</div>
+      <div class="logo-adv">Aguas del Valle</div>
+    </div>
+    <div class="hdr-text">
+      <h1>Formulario de Postulación<br>Licitación Cartografía Vectorial SIG 2025</h1>
+      <p>Actualización Cartografía Base — Sistema GeoGota (ArcGIS Enterprise)<br>
+      Regiones de Valparaíso (V) y Coquimbo (IV) &nbsp;·&nbsp; Esval S.A. y Aguas del Valle S.A.</p>
+      <div class="badges">
+        <span class="badge b1">📋 TDR Cartografía ESVAL 2025</span>
+        <span class="badge b2">🗓 Contrato 12 meses · 2 ciclos semestrales</span>
+        <span class="badge b3">🗺 Escala ≤ 1:5.000 · RMSE ≤ 3 m · EPSG:4326</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- STICKY NAV -->
+<nav class="snav" id="snav">
+  <div class="snav-inner">
+    <a class="ns active" id="ns1" href="#sec1"><span class="nsn" id="nn1">1</span><span class="nsl">Empresa</span></a>
+    <a class="ns" id="ns2" href="#sec2"><span class="nsn" id="nn2">2</span><span class="nsl">Contacto</span></a>
+    <a class="ns" id="ns3" href="#sec3"><span class="nsn" id="nn3">3</span><span class="nsl">Experiencia</span></a>
+    <a class="ns" id="ns4" href="#sec4"><span class="nsn" id="nn4">4</span><span class="nsl">Personal</span></a>
+    <a class="ns" id="ns5" href="#sec5"><span class="nsn" id="nn5">5</span><span class="nsl">Oferta</span></a>
+    <a class="ns" id="ns6" href="#sec6"><span class="nsn" id="nn6">6</span><span class="nsl">Metodología</span></a>
+    <a class="ns" id="ns7" href="#sec7"><span class="nsn" id="nn7">7</span><span class="nsl">Cronograma</span></a>
+    <a class="ns" id="ns8" href="#sec8"><span class="nsn" id="nn8">8</span><span class="nsl">Documentos</span></a>
+    <a class="ns" id="ns9" href="#sec9"><span class="nsn" id="nn9">9</span><span class="nsl">Envío</span></a>
+  </div>
+</nav>
+
+<main>
+<div id="success">
+  <div class="sico">✅</div>
+  <h2>Postulación Enviada Exitosamente</h2>
+  <p>Su oferta ha sido registrada en el sistema de licitaciones de ESVAL S.A. / Aguas del Valle S.A.<br>Recibirá un correo de confirmación a la brevedad.</p>
+  <div class="sref" id="suc-ref">N° de Referencia: —</div>
+</div>
+
+<form id="form" novalidate>
+
+<!-- ══════════════════════════════════════════
+     SEC 1 · EMPRESA
+══════════════════════════════════════════ -->
+<div class="card" id="sec1">
+  <div class="chdr"><div class="cico">🏢</div>
+    <div><div class="ctitle">1. Identificación de la Empresa Oferente</div>
+    <div class="csub">Datos legales y de registro del proveedor</div></div>
+  </div>
+  <div class="cbody">
+    <div class="ib"><strong>Instrucciones</strong>Complete todos los campos obligatorios (<span style="color:var(--red)">*</span>). RUT sin puntos y con guión (ej: 12345678-9). Los datos deben corresponder a la razón social legal de la empresa.</div>
+    <div class="g2">
+      <div class="f span2"><label class="lbl">Razón Social / Nombre de la Empresa <span class="req">*</span></label>
+        <input type="text" id="razon_social" placeholder="Ej: Cartografía y Geomática Chile S.A." autocomplete="organization"/>
+        <div class="errmsg" id="e-razon_social">Campo obligatorio.</div></div>
+      <div class="f"><label class="lbl">RUT Empresa <span class="req">*</span></label>
+        <input type="text" id="rut_empresa" placeholder="12345678-9" maxlength="12"/>
+        <div class="errmsg" id="e-rut_empresa">Ingrese un RUT válido (ej: 12345678-9).</div></div>
+      <div class="f"><label class="lbl">Giro Comercial / Actividad Principal <span class="req">*</span></label>
+        <input type="text" id="giro" placeholder="Ej: Servicios de Cartografía y SIG"/>
+        <div class="errmsg" id="e-giro">Campo obligatorio.</div></div>
+      <div class="f span2"><label class="lbl">Dirección Comercial Completa <span class="req">*</span></label>
+        <input type="text" id="direccion" placeholder="Calle / Número / Piso / Oficina"/>
+        <div class="errmsg" id="e-direccion">Campo obligatorio.</div></div>
+      <div class="f"><label class="lbl">Ciudad <span class="req">*</span></label>
+        <input type="text" id="ciudad" placeholder="Ej: Santiago"/>
+        <div class="errmsg" id="e-ciudad">Campo obligatorio.</div></div>
+      <div class="f"><label class="lbl">Región <span class="req">*</span></label>
+        <select id="region"><option value="">— Seleccione —</option>
+          <option>Región de Arica y Parinacota</option><option>Región de Tarapacá</option>
+          <option>Región de Antofagasta</option><option>Región de Atacama</option>
+          <option>Región de Coquimbo</option><option>Región de Valparaíso</option>
+          <option>Región Metropolitana de Santiago</option>
+          <option>Región del Libertador Bernardo O'Higgins</option>
+          <option>Región del Maule</option><option>Región de Ñuble</option>
+          <option>Región del Biobío</option><option>Región de La Araucanía</option>
+          <option>Región de Los Ríos</option><option>Región de Los Lagos</option>
+          <option>Región de Aysén</option><option>Región de Magallanes</option>
+        </select>
+        <div class="errmsg" id="e-region">Seleccione una región.</div></div>
+      <div class="f"><label class="lbl">Tamaño de la Empresa</label>
+        <select id="tamano"><option value="">— Seleccione —</option>
+          <option>Microempresa (1–9 trabajadores)</option>
+          <option>Pequeña empresa (10–49 trabajadores)</option>
+          <option>Mediana empresa (50–199 trabajadores)</option>
+          <option>Gran empresa (200+ trabajadores)</option>
+        </select></div>
+      <div class="f"><label class="lbl">Sitio Web Corporativo</label>
+        <input type="url" id="web" placeholder="https://www.empresa.cl"/></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SEC 2 · CONTACTO
+══════════════════════════════════════════ -->
+<div class="card" id="sec2">
+  <div class="chdr"><div class="cico">👤</div>
+    <div><div class="ctitle">2. Datos de Contacto</div>
+    <div class="csub">Persona responsable de la postulación</div></div>
+  </div>
+  <div class="cbody">
+    <div class="g2">
+      <div class="f"><label class="lbl">Nombre Completo del Contacto <span class="req">*</span></label>
+        <input type="text" id="nombre_contacto" placeholder="Nombre y Apellido" autocomplete="name"/>
+        <div class="errmsg" id="e-nombre_contacto">Campo obligatorio.</div></div>
+      <div class="f"><label class="lbl">Cargo <span class="req">*</span></label>
+        <input type="text" id="cargo" placeholder="Ej: Gerente de Proyectos SIG"/>
+        <div class="errmsg" id="e-cargo">Campo obligatorio.</div></div>
+      <div class="f"><label class="lbl">Correo Electrónico Principal <span class="req">*</span></label>
+        <input type="email" id="email" placeholder="contacto@empresa.cl" autocomplete="email"/>
+        <div class="errmsg" id="e-email">Ingrese un correo válido.</div></div>
+      <div class="f"><label class="lbl">Correo Electrónico Alternativo</label>
+        <input type="email" id="email_alt" placeholder="alternativo@empresa.cl"/></div>
+      <div class="f"><label class="lbl">Teléfono / WhatsApp <span class="req">*</span></label>
+        <input type="tel" id="telefono" placeholder="+56 9 XXXX XXXX" autocomplete="tel"/>
+        <div class="errmsg" id="e-telefono">Campo obligatorio.</div></div>
+      <div class="f"><label class="lbl">Teléfono Fijo / Alternativo</label>
+        <input type="tel" id="telefono_alt" placeholder="+56 32 XXXX XXXX"/></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SEC 3 · EXPERIENCIA
+══════════════════════════════════════════ -->
+<div class="card" id="sec3">
+  <div class="chdr"><div class="cico">🗂</div>
+    <div><div class="ctitle">3. Experiencia y Capacidades Técnicas</div>
+    <div class="csub">Perfil del contratista según bases de licitación</div></div>
+  </div>
+  <div class="cbody">
+    <div class="wb"><strong>⚠ Requisitos mínimos exigidos</strong>
+      Mínimo <strong>3 proyectos de cartografía digital a gran escala (1:1.000 o superior)</strong> en los últimos 5 años, acreditados con certificados o actas de recepción conforme. La experiencia con ArcGIS Pro / EGDB y fotogrametría son factores de evaluación técnica determinantes.</div>
+
+    <div class="sub">A. Trayectoria en Cartografía y SIG</div>
+    <div class="g2">
+      <div class="f"><label class="lbl">Años de experiencia de la empresa en Cartografía / SIG <span class="req">*</span></label>
+        <select id="anos_exp"><option value="">— Seleccione —</option>
+          <option>Menos de 2 años</option><option>2 a 5 años</option>
+          <option>5 a 10 años</option><option>Más de 10 años</option>
+        </select>
+        <div class="errmsg" id="e-anos_exp">Seleccione una opción.</div></div>
+      <div class="f"><label class="lbl">N° de proyectos gran escala (1:1.000+) en últimos 5 años <span class="req">*</span></label>
+        <select id="cant_proyectos"><option value="">— Seleccione —</option>
+          <option>Ninguno (no cumple requisito mínimo)</option>
+          <option>1 a 2 proyectos (por debajo del mínimo)</option>
+          <option>3 proyectos (mínimo exigido)</option>
+          <option>4 a 5 proyectos</option><option>Más de 5 proyectos</option>
+        </select>
+        <div class="errmsg" id="e-cant_proyectos">Seleccione una opción.</div></div>
+    </div>
+    <div class="f mt"><label class="lbl">Descripción de los 3 proyectos más relevantes <span class="req">*</span></label>
+      <textarea id="proyectos_rel" style="min-height:120px" placeholder="Por cada proyecto indique: nombre, cliente, año, escala de trabajo, superficie cubierta, plataforma GIS utilizada y tipo de entregables generados. El TDR exige acreditar mínimo 3 proyectos con certificados o actas de recepción conforme (adjuntar en Sección 8)."></textarea>
+      <div class="hint">Mínimo 150 caracteres. Recuerde adjuntar los certificados correspondientes en la Sección 8.</div>
+      <div class="errmsg" id="e-proyectos_rel">Describa al menos 3 proyectos (mínimo 150 caracteres).</div></div>
+
+    <div class="sub">B. Plataforma Esri / ArcGIS</div>
+    <div class="f"><label class="lbl">Nivel de experiencia con ArcGIS (Pro + EGDB) <span class="req">*</span></label>
+      <div class="pg" id="exp-arcgis-grp">
+        <label class="pill"><input type="radio" name="exp_arcgis" value="Avanzado – ArcGIS Pro + EGDB + Enterprise"/><span class="pd"></span>Avanzado (Pro + EGDB + Enterprise)</label>
+        <label class="pill"><input type="radio" name="exp_arcgis" value="Intermedio – ArcGIS Pro + EGDB"/><span class="pd"></span>Intermedio (Pro + EGDB)</label>
+        <label class="pill"><input type="radio" name="exp_arcgis" value="Básico – ArcGIS Pro solamente"/><span class="pd"></span>Básico (Pro solamente)</label>
+        <label class="pill"><input type="radio" name="exp_arcgis" value="Sin experiencia con plataforma Esri"/><span class="pd"></span>Sin experiencia Esri</label>
+      </div>
+      <div class="errmsg" id="e-exp_arcgis">Seleccione una opción.</div></div>
+    <div class="f mt"><label class="lbl">Otras plataformas GIS que maneja la empresa</label>
+      <div class="pg">
+        <label class="pill chk"><input type="checkbox" name="otras_plat" value="QGIS"/><span class="pd"></span>QGIS</label>
+        <label class="pill chk"><input type="checkbox" name="otras_plat" value="AutoCAD Map 3D"/><span class="pd"></span>AutoCAD Map 3D</label>
+        <label class="pill chk"><input type="checkbox" name="otras_plat" value="Global Mapper"/><span class="pd"></span>Global Mapper</label>
+        <label class="pill chk"><input type="checkbox" name="otras_plat" value="FME (Safe Software)"/><span class="pd"></span>FME</label>
+        <label class="pill chk"><input type="checkbox" name="otras_plat" value="MapInfo Pro"/><span class="pd"></span>MapInfo Pro</label>
+        <label class="pill chk" id="pill-otras-plat"><input type="checkbox" name="otras_plat" value="Otros" id="cb-otras-plat"/><span class="pd"></span>Otros</label>
+      </div>
+      <textarea id="otras_plat_txt" style="min-height:60px;margin-top:8px;display:none" placeholder="Indique otras plataformas GIS que utiliza la empresa..."></textarea></div>
+
+    <div class="sub">C. Levantamiento de Datos y Fuentes</div>
+    <div class="f"><label class="lbl">Fuentes de datos que la empresa puede proveer <span class="req">*</span></label>
+      <div class="hint" style="margin-bottom:6px">Los insumos no deben tener más de 6 meses de antigüedad desde el inicio del contrato.</div>
+      <div class="pg" id="fuentes-grp">
+        <label class="pill chk"><input type="checkbox" name="fuentes" value="Imágenes satelitales alta resolución"/><span class="pd"></span>Imágenes satelitales AR</label>
+        <label class="pill chk"><input type="checkbox" name="fuentes" value="Fotografías aéreas – vuelos fotogramétricos"/><span class="pd"></span>Fotografías aéreas</label>
+        <label class="pill chk"><input type="checkbox" name="fuentes" value="Drones (UAV)"/><span class="pd"></span>Drones (UAV)</label>
+        <label class="pill chk"><input type="checkbox" name="fuentes" value="Cartografía oficial (MBN / Municipalidades)"/><span class="pd"></span>Cartografía oficial (MBN/Municipios)</label>
+        <label class="pill chk"><input type="checkbox" name="fuentes" value="Puntos de control GPS en terreno"/><span class="pd"></span>Puntos de control GPS</label>
+        <label class="pill chk" id="pill-fuentes-otros"><input type="checkbox" name="fuentes" value="Otros" id="cb-fuentes-otros"/><span class="pd"></span>Otros</label>
+      </div>
+      <textarea id="fuentes_otros_txt" style="min-height:60px;margin-top:8px;display:none" placeholder="Describa otras fuentes de datos que la empresa puede proveer..."></textarea>
+      <div class="errmsg" id="e-fuentes">Seleccione al menos una fuente.</div></div>
+    <div class="f mt"><label class="lbl">¿La empresa realiza restitución fotogramétrica?</label>
+      <div class="pg">
+        <label class="pill"><input type="radio" name="exp_fotog" value="Sí, propia (equipo y software interno)"/><span class="pd"></span>Sí, propia (equipo interno)</label>
+        <label class="pill"><input type="radio" name="exp_fotog" value="Sí, mediante subcontratación"/><span class="pd"></span>Sí, por subcontratación</label>
+        <label class="pill"><input type="radio" name="exp_fotog" value="No"/><span class="pd"></span>No</label>
+      </div></div>
+
+    <div class="sub">D. Automatización Python / ArcPy y Bases de Datos</div>
+    <div class="g2">
+      <div class="f"><label class="lbl">Nivel de experiencia en Python / ArcPy <span class="req">*</span></label>
+        <div class="pg" id="arcpy-grp">
+          <label class="pill"><input type="radio" name="exp_arcpy" value="Avanzado – ETL complejos + Oracle SDE"/><span class="pd"></span>Avanzado (ETL + Oracle SDE)</label>
+          <label class="pill"><input type="radio" name="exp_arcpy" value="Intermedio – scripts ArcPy con manejo de errores"/><span class="pd"></span>Intermedio</label>
+          <label class="pill"><input type="radio" name="exp_arcpy" value="Básico – scripts ArcPy simples"/><span class="pd"></span>Básico</label>
+          <label class="pill"><input type="radio" name="exp_arcpy" value="Sin experiencia"/><span class="pd"></span>Sin experiencia</label>
+        </div>
+        <div class="errmsg" id="e-exp_arcpy">Seleccione una opción.</div></div>
+      <div class="f"><label class="lbl">Experiencia con Oracle / SDE</label>
+        <div class="pg">
+          <label class="pill"><input type="radio" name="exp_oracle" value="Sí, Oracle 19c + ArcSDE (administración)"/><span class="pd"></span>Sí, Oracle 19c + ArcSDE</label>
+          <label class="pill"><input type="radio" name="exp_oracle" value="Sí, Oracle – consultas y ETL"/><span class="pd"></span>Sí, consultas y ETL</label>
+          <label class="pill"><input type="radio" name="exp_oracle" value="No"/><span class="pd"></span>No</label>
+        </div></div>
+    </div>
+
+    <div class="sub">E. Sector Servicios Básicos y Software</div>
+    <div class="g2">
+      <div class="f"><label class="lbl">¿Experiencia con empresas de servicios básicos?</label>
+        <div class="pg">
+          <label class="pill"><input type="radio" name="exp_util" value="Sí, agua / alcantarillado"/><span class="pd"></span>Sí, agua / alcantarillado</label>
+          <label class="pill"><input type="radio" name="exp_util" value="Sí, otros utilities"/><span class="pd"></span>Sí, otros utilities</label>
+          <label class="pill"><input type="radio" name="exp_util" value="Estado / Municipios"/><span class="pd"></span>Estado / Municipios</label>
+          <label class="pill"><input type="radio" name="exp_util" value="No"/><span class="pd"></span>No</label>
+        </div></div>
+      <div class="f"><label class="lbl">Software GIS con licencias vigentes <span class="req">*</span></label>
+        <div class="pg" id="sw-grp">
+          <label class="pill chk"><input type="checkbox" name="sw_gis" value="ArcGIS Pro"/><span class="pd"></span>ArcGIS Pro</label>
+          <label class="pill chk"><input type="checkbox" name="sw_gis" value="ArcGIS Enterprise"/><span class="pd"></span>ArcGIS Enterprise</label>
+          <label class="pill chk"><input type="checkbox" name="sw_gis" value="QGIS"/><span class="pd"></span>QGIS</label>
+          <label class="pill chk"><input type="checkbox" name="sw_gis" value="Agisoft Metashape"/><span class="pd"></span>Metashape</label>
+          <label class="pill chk"><input type="checkbox" name="sw_gis" value="Pix4D"/><span class="pd"></span>Pix4D</label>
+          <label class="pill chk"><input type="checkbox" name="sw_gis" value="Otro software fotogrametría"/><span class="pd"></span>Otro fotogrametría</label>
+        </div>
+        <div class="errmsg" id="e-sw_gis">Seleccione al menos uno.</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SEC 4 · PERSONAL CLAVE
+══════════════════════════════════════════ -->
+<div class="card" id="sec4">
+  <div class="chdr"><div class="cico">👥</div>
+    <div><div class="ctitle">4. Personal Clave Propuesto</div>
+    <div class="csub">5 cargos obligatorios · CV y documentos requeridos por cargo</div></div>
+  </div>
+  <div class="cbody">
+    <div class="ib"><strong>Equipo mínimo requerido (exactamente 5 cargos)</strong>
+      Complete los datos del profesional propuesto para cada cargo. Adjunte el CV directamente en la tarjeta de cada profesional. Si desea proponer integrantes adicionales, use el botón al final de la sección.</div>
+
+    <div class="pers-grid">
+
+      <!-- JEFE DE PROYECTO -->
+      <div class="pcard">
+        <h4>🎯 Jefe de Proyecto <span style="color:var(--red);font-weight:400;font-size:11px">* requerido</span></h4>
+        <p class="req-note">Mínimo 5 años de experiencia en gestión de proyectos SIG o cartográficos. Responsable de coordinación general y comunicación con ESVAL / Aguas del Valle.</p>
+        <div class="f"><label class="lbl">Nombre completo <span class="req">*</span></label>
+          <input type="text" id="jp_nombre" placeholder="Nombre y Apellido"/>
+          <div class="errmsg" id="e-jp_nombre">Campo obligatorio.</div></div>
+        <div class="f"><label class="lbl">Profesión / Título</label>
+          <input type="text" id="jp_prof" placeholder="Ej: Ingeniero en Geomática"/></div>
+        <div class="f"><label class="lbl">Años de experiencia en gestión SIG</label>
+          <select id="jp_exp"><option value="">— Seleccione —</option>
+            <option>5 a 7 años</option><option>7 a 10 años</option><option>Más de 10 años</option>
+          </select></div>
+        <div class="f mt"><label class="lbl">CV del profesional (PDF) <span class="req">*</span></label>
+          <div class="upload" onclick="document.getElementById('f_cv_jp').click()">
+            <input type="file" id="f_cv_jp" accept=".pdf"/>
+            <div class="up-ico">📄</div>
+            <div class="up-txt"><strong>Adjuntar CV</strong> · PDF · máx. 5 MB</div>
+            <div class="fname" id="fn-cv_jp"></div>
+          </div>
+          <div class="errmsg" id="e-cv_jp">Adjunte el CV del Jefe de Proyecto.</div></div>
+      </div>
+
+      <!-- COORDINADOR SIG -->
+      <div class="pcard">
+        <h4>🗺 Coordinador SIG <span style="color:var(--red);font-weight:400;font-size:11px">* requerido</span></h4>
+        <p class="req-note">Mínimo 3 años con ArcGIS, modelamiento de datos espaciales y administración de EGDB. Responsable técnico de la implementación y calidad de los datos.</p>
+        <div class="f"><label class="lbl">Nombre completo <span class="req">*</span></label>
+          <input type="text" id="csig_nombre" placeholder="Nombre y Apellido"/>
+          <div class="errmsg" id="e-csig_nombre">Campo obligatorio.</div></div>
+        <div class="f"><label class="lbl">Profesión / Título</label>
+          <input type="text" id="csig_prof" placeholder="Ej: Geógrafo / Ingeniero Civil"/></div>
+        <div class="f"><label class="lbl">Años de experiencia en ArcGIS / EGDB</label>
+          <select id="csig_exp"><option value="">— Seleccione —</option>
+            <option>3 a 5 años</option><option>5 a 7 años</option><option>Más de 7 años</option>
+          </select></div>
+        <div class="f mt"><label class="lbl">CV del profesional (PDF) <span class="req">*</span></label>
+          <div class="upload" onclick="document.getElementById('f_cv_csig').click()">
+            <input type="file" id="f_cv_csig" accept=".pdf"/>
+            <div class="up-ico">📄</div>
+            <div class="up-txt"><strong>Adjuntar CV</strong> · PDF · máx. 5 MB</div>
+            <div class="fname" id="fn-cv_csig"></div>
+          </div>
+          <div class="errmsg" id="e-cv_csig">Adjunte el CV del Coordinador SIG.</div></div>
+      </div>
+
+      <!-- ESPECIALISTA CARTOGRAFÍA -->
+      <div class="pcard">
+        <h4>✏️ Esp. en Cartografía y Procesos de Datos <span style="color:var(--red);font-weight:400;font-size:11px">* requerido</span></h4>
+        <p class="req-note">Experiencia en edición y digitalización cartográfica. Asegura el cumplimiento de especificaciones de precisión y topología.</p>
+        <div class="f"><label class="lbl">Nombre completo <span class="req">*</span></label>
+          <input type="text" id="ec_nombre" placeholder="Nombre y Apellido"/>
+          <div class="errmsg" id="e-ec_nombre">Campo obligatorio.</div></div>
+        <div class="f"><label class="lbl">Profesión / Título</label>
+          <input type="text" id="ec_prof" placeholder="Ej: Técnico en Topografía / Geógrafo"/></div>
+        <div class="f"><label class="lbl">Años de experiencia en edición cartográfica</label>
+          <select id="ec_exp"><option value="">— Seleccione —</option>
+            <option>1 a 3 años</option><option>3 a 5 años</option><option>Más de 5 años</option>
+          </select></div>
+        <div class="f mt"><label class="lbl">CV del profesional (PDF) <span class="req">*</span></label>
+          <div class="upload" onclick="document.getElementById('f_cv_ec').click()">
+            <input type="file" id="f_cv_ec" accept=".pdf"/>
+            <div class="up-ico">📄</div>
+            <div class="up-txt"><strong>Adjuntar CV</strong> · PDF · máx. 5 MB</div>
+            <div class="fname" id="fn-cv_ec"></div>
+          </div>
+          <div class="errmsg" id="e-cv_ec">Adjunte el CV del Especialista en Cartografía.</div></div>
+      </div>
+
+      <!-- ESPECIALISTA QA/QC -->
+      <div class="pcard">
+        <h4>🔍 Especialista en Control de Calidad (QA/QC) <span style="color:var(--red);font-weight:400;font-size:11px">* requerido</span></h4>
+        <p class="req-note">Responsable de diseñar y ejecutar los planes de aseguramiento de la calidad de todos los entregables.</p>
+        <div class="f"><label class="lbl">Nombre completo <span class="req">*</span></label>
+          <input type="text" id="qaqc_nombre" placeholder="Nombre y Apellido"/>
+          <div class="errmsg" id="e-qaqc_nombre">Campo obligatorio.</div></div>
+        <div class="f"><label class="lbl">Profesión / Título</label>
+          <input type="text" id="qaqc_prof" placeholder="Ej: Geógrafo / Cartógrafo"/></div>
+        <div class="f"><label class="lbl">Años de experiencia en QA/QC SIG</label>
+          <select id="qaqc_exp"><option value="">— Seleccione —</option>
+            <option>1 a 3 años</option><option>3 a 5 años</option><option>Más de 5 años</option>
+          </select></div>
+        <div class="f mt"><label class="lbl">CV del profesional (PDF) <span class="req">*</span></label>
+          <div class="upload" onclick="document.getElementById('f_cv_qaqc').click()">
+            <input type="file" id="f_cv_qaqc" accept=".pdf"/>
+            <div class="up-ico">📄</div>
+            <div class="up-txt"><strong>Adjuntar CV</strong> · PDF · máx. 5 MB</div>
+            <div class="fname" id="fn-cv_qaqc"></div>
+          </div>
+          <div class="errmsg" id="e-cv_qaqc">Adjunte el CV del Especialista QA/QC.</div></div>
+      </div>
+
+      <!-- ESP. BD / AUTOMATIZACIÓN -->
+      <div class="pcard full">
+        <h4>⚙️ Especialista en BD Geoespaciales y Automatización <span style="color:var(--red);font-weight:400;font-size:11px">* requerido</span></h4>
+        <p class="req-note">Mínimo 3 años en Geodatabases Corporativas sobre Oracle (SDE) y Python/ArcPy. Experiencia demostrable en procesos ETL de datos espaciales.</p>
+        <div class="g2">
+          <div class="f"><label class="lbl">Nombre completo <span class="req">*</span></label>
+            <input type="text" id="bd_nombre" placeholder="Nombre y Apellido"/>
+            <div class="errmsg" id="e-bd_nombre">Campo obligatorio.</div></div>
+          <div class="f"><label class="lbl">Profesión / Título</label>
+            <input type="text" id="bd_prof" placeholder="Ej: Ing. en Informática / Geomática"/></div>
+          <div class="f"><label class="lbl">Años de experiencia Oracle SDE + Python/ArcPy</label>
+            <select id="bd_exp"><option value="">— Seleccione —</option>
+              <option>3 a 5 años</option><option>5 a 7 años</option><option>Más de 7 años</option>
+            </select></div>
+          <div class="f"><label class="lbl">Nivel Python / ArcPy</label>
+            <div class="pg">
+              <label class="pill"><input type="radio" name="bd_python" value="Avanzado"/><span class="pd"></span>Avanzado</label>
+              <label class="pill"><input type="radio" name="bd_python" value="Intermedio"/><span class="pd"></span>Intermedio</label>
+              <label class="pill"><input type="radio" name="bd_python" value="Básico"/><span class="pd"></span>Básico</label>
+            </div></div>
+          <div class="f" style="grid-column:span 2"><label class="lbl">CV del profesional (PDF) <span class="req">*</span></label>
+            <div class="upload" onclick="document.getElementById('f_cv_bd').click()">
+              <input type="file" id="f_cv_bd" accept=".pdf"/>
+              <div class="up-ico">📄</div>
+              <div class="up-txt"><strong>Adjuntar CV</strong> · PDF · máx. 5 MB</div>
+              <div class="fname" id="fn-cv_bd"></div>
+            </div>
+            <div class="errmsg" id="e-cv_bd">Adjunte el CV del Especialista en BD y Automatización.</div></div>
+        </div>
+      </div>
+
+    </div><!-- /pers-grid -->
+
+    <!-- PROFESIONALES ADICIONALES (opcional) -->
+    <div id="extra-pers-wrap" style="margin-top:14px;"></div>
+    <button type="button" class="btn-add" id="btn-add-pers">
+      <span>➕</span> Agregar profesional adicional (opcional)
+    </button>
+    <p class="hint" style="margin-top:6px">Los 5 cargos anteriores son de carácter obligatorio. Si desea proponer integrantes adicionales que refuercen el equipo, puede agregarlos aquí.</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SEC 5 · OFERTA
+══════════════════════════════════════════ -->
+<div class="card" id="sec5">
+  <div class="chdr"><div class="cico">💰</div>
+    <div><div class="ctitle">5. Oferta Técnica y Económica</div>
+    <div class="csub">Servicio base + 3 adicionales individuales · 12 meses · 2 ciclos semestrales</div></div>
+  </div>
+  <div class="cbody">
+    <div class="ib"><strong>Estructura del Contrato</strong>
+      El contrato tiene una duración total de <strong>12 meses</strong>, divididos en <strong>2 ciclos semestrales</strong> de actualización cartográfica. La capacidad mínima exigida es de <strong>400 manzanas actualizadas por mes</strong>. En caso de retraso en la entrega semestral, se aplicarán penalidades: 0,5% por día para los primeros 5 días hábiles, 1% del día 6 al 10, y 2% para retrasos superiores a 10 días, con un tope máximo del 10% del valor del ciclo semestral.</div>
+
+    <div class="sub">A. Oferta Servicio Base</div>
+    <div class="g2">
+      <div class="f"><label class="lbl">Monto Total Servicio Base — 12 meses (IVA incluido) <span class="req">*</span></label>
+        <div class="pfx"><span class="pfx-s">$</span><input type="text" id="monto_base" placeholder="0" inputmode="numeric"/></div>
+        <div class="hint">Valor total en CLP por el período completo de 12 meses.</div>
+        <div class="errmsg" id="e-monto_base">Ingrese el monto de la oferta.</div></div>
+      <div class="f"><label class="lbl">Valor por Ciclo Semestral (IVA incluido)</label>
+        <div class="pfx"><span class="pfx-s">$</span><input type="text" id="monto_semestral" placeholder="Se calcula automáticamente" inputmode="numeric" readonly style="background:#EDF5FB;color:var(--muted);"/></div>
+        <div class="hint">Base para cálculo de penalidades (tope 10% del ciclo semestral).</div></div>
+      <div class="f"><label class="lbl">Capacidad de Actualización Mensual <span class="req">*</span></label>
+        <select id="cap_manzanas"><option value="">— Seleccione —</option>
+          <option>400 manzanas/mes (mínimo exigido)</option>
+          <option>401 a 600 manzanas/mes</option>
+          <option>601 a 800 manzanas/mes</option>
+          <option>Más de 800 manzanas/mes</option>
+        </select>
+        <div class="hint">Manzana = segmento + solera + block + línea oficial + predio + dirección.</div>
+        <div class="errmsg" id="e-cap_manzanas">Seleccione la capacidad mensual.</div></div>
+      <div class="f"><label class="lbl">Plazo de Primera Entrega Semestral <span class="req">*</span></label>
+        <select id="plazo"><option value="">— Seleccione —</option>
+          <option>Hasta 30 días hábiles desde el acta de inicio</option>
+          <option>31 a 45 días hábiles</option>
+          <option>46 a 60 días hábiles</option>
+          <option>Más de 60 días hábiles</option>
+        </select>
+        <div class="errmsg" id="e-plazo">Seleccione un plazo.</div></div>
+    </div>
+
+    <div class="sub">B. Servicios Adicionales — Cotización Individual</div>
+    <div class="ib"><strong>Ítems adicionales a cotizar de forma individual</strong>
+      Indique si cotiza cada servicio y el monto correspondiente. Deben cotizarse como ítems independientes del servicio base.</div>
+    <div class="g3">
+      <div class="f"><label class="lbl">¿Cotiza Levantamiento POI? <span class="req">*</span></label>
+        <div class="pg" id="poi-grp">
+          <label class="pill"><input type="radio" name="cotiza_poi" value="Sí"/><span class="pd"></span>Sí</label>
+          <label class="pill"><input type="radio" name="cotiza_poi" value="No"/><span class="pd"></span>No</label>
+        </div>
+        <div class="hint">Puntos de interés: comercios, servicios públicos, establecimientos educacionales, etc. Ambas regiones.</div>
+        <div class="errmsg" id="e-cotiza_poi">Indique si cotiza este ítem.</div></div>
+      <div class="f"><label class="lbl">¿Cotiza Puntos Control Geodésico Masivo? <span class="req">*</span></label>
+        <div class="pg" id="gcs-grp">
+          <label class="pill"><input type="radio" name="cotiza_gcs" value="Sí"/><span class="pd"></span>Sí</label>
+          <label class="pill"><input type="radio" name="cotiza_gcs" value="No"/><span class="pd"></span>No</label>
+        </div>
+        <div class="hint">Red de puntos de control geodésico masivo. Mínimo 3 por localidad.</div>
+        <div class="errmsg" id="e-cotiza_gcs">Indique si cotiza este ítem.</div></div>
+      <div class="f"><label class="lbl">¿Cotiza Actualización Curvas de Nivel? <span class="req">*</span></label>
+        <div class="pg" id="cnivel-grp">
+          <label class="pill"><input type="radio" name="cotiza_cnivel" value="Sí"/><span class="pd"></span>Sí</label>
+          <label class="pill"><input type="radio" name="cotiza_cnivel" value="No"/><span class="pd"></span>No</label>
+        </div>
+        <div class="hint">Curvas de nivel y datos de altura en ambas regiones dentro del área de concesión.</div>
+        <div class="errmsg" id="e-cotiza_cnivel">Indique si cotiza este ítem.</div></div>
+    </div>
+    <div class="g3 mt">
+      <div class="f"><label class="lbl">Monto POI — Ambas Regiones (IVA incl.)</label>
+        <div class="pfx"><span class="pfx-s">$</span><input type="text" id="monto_poi" placeholder="0" inputmode="numeric"/></div></div>
+      <div class="f"><label class="lbl">Monto Puntos Control Geodésico (IVA incl.)</label>
+        <div class="pfx"><span class="pfx-s">$</span><input type="text" id="monto_gcs" placeholder="0" inputmode="numeric"/></div></div>
+      <div class="f"><label class="lbl">Monto Curvas de Nivel (IVA incl.)</label>
+        <div class="pfx"><span class="pfx-s">$</span><input type="text" id="monto_cnivel" placeholder="0" inputmode="numeric"/></div></div>
+    </div>
+    <div class="f mt"><label class="lbl">Observaciones / Condiciones Particulares de la Oferta</label>
+      <textarea id="obs_oferta" style="min-height:80px" placeholder="Forma de pago, hitos de facturación, garantías ofrecidas, subcontrataciones previstas, valor agregado u otras condiciones relevantes de la oferta económica."></textarea></div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SEC 6 · METODOLOGÍA
+══════════════════════════════════════════ -->
+<div class="card" id="sec6">
+  <div class="chdr"><div class="cico">🔬</div>
+    <div><div class="ctitle">6. Propuesta Metodológica</div>
+    <div class="csub">Factor de peso determinante en la evaluación técnica</div></div>
+  </div>
+  <div class="cbody">
+    <div class="wb"><strong>⚠ Sección de alta relevancia evaluativa</strong>La metodología propuesta es un factor de peso determinante en la evaluación de la oferta. El documento debe detallar todos los aspectos técnicos exigidos. Adjunte el documento principal y complemente con notas en los campos disponibles.</div>
+
+    <div class="sub">Documento de Propuesta Metodológica</div>
+    <div class="ib"><strong>Contenido mínimo exigido en la propuesta metodológica</strong>
+      El documento metodológico debe abordar obligatoriamente los siguientes puntos:<br><br>
+      <strong>① Fuente de datos primaria:</strong> Proveedor, resolución espacial y antigüedad máxima (no superior a 6 meses desde el inicio del contrato).<br>
+      <strong>② Georreferenciación y ortorrectificación:</strong> Proceso para garantizar RMSE ≤ 3 m, uso de puntos de control terrestre y software utilizado.<br>
+      <strong>③ Restitución fotogramétrica / digitalización:</strong> Si el proceso es manual, semiautomático o automático; técnicas de fotointerpretación por tipo de capa (segmentos, predios, soleras, direcciones, áreas verdes, cauces).<br>
+      <strong>④ Edición cartográfica y homologación:</strong> Asignación de atributos según estructura del TDR (XY_BLOCK, XY_DIRECCION, XY_SEGMENTO, etc.), normalización de nombres de calles (sin Ñ, sin abreviaciones), y mantención de IDs únicos en elementos modificados y eliminados.<br>
+      <strong>⑤ Integridad topológica:</strong> Reglas a aplicar: Blocks (Must Not Overlap), Predios (Must Be Completely Inside Block + todo Predio contiene al menos una dirección), Soleras Cerradas (Covered By Boundary Of Blocks), Direcciones (Must Be Inside Predios).<br>
+      <strong>⑥ Detección de cambios y validación:</strong> Proceso para identificar nuevas urbanizaciones, validación de nombres de calles y números de predio (promedio 720 direcciones/comuna).<br>
+      <strong>⑦ Plan QA/QC:</strong> Auditoría de precisión geométrica (RMSE ≤ 3 m), revisión temática, validación topológica automática y manual, controles de campo.<br>
+      <strong>⑧ Script Python/ArcPy:</strong> Manejo transaccional con rollback, validación previa de FGDB incremental, bitácora (log) detallada, parametrización completa, componente intermediario para orquestación automática.<br>
+      <strong>⑨ Entrega FGDB incremental:</strong> Estructura con 3 tipos de elementos (Nuevos, Modificados preservando IDs, Eliminados con tabla de IDs) y garantía de compatibilidad con la EGDB de producción.
+    </div>
+
+    <div class="f">
+      <label class="lbl">Documento de Propuesta Metodológica (PDF) <span class="req">*</span></label>
+      <div class="upload" onclick="document.getElementById('f_metodologia').click()">
+        <input type="file" id="f_metodologia" accept=".pdf,.doc,.docx"/>
+        <div class="up-ico">📋</div>
+        <div class="up-txt"><strong>Adjuntar Propuesta Metodológica</strong><br>Documento que aborde todos los puntos ① a ⑨ indicados arriba · PDF, DOC, DOCX · máx. 30 MB</div>
+        <div class="fname" id="fn-metodologia"></div>
+      </div>
+      <div class="errmsg" id="e-metodologia">Debe adjuntar el documento de propuesta metodológica.</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SEC 7 · CRONOGRAMA
+══════════════════════════════════════════ -->
+<div class="card" id="sec7">
+  <div class="chdr"><div class="cico">📅</div>
+    <div><div class="ctitle">7. Cronograma Propuesto</div>
+    <div class="csub">12 meses · 2 ciclos semestrales · Carta Gantt obligatoria</div></div>
+  </div>
+  <div class="cbody">
+    <div class="wb"><strong>⚠ Carta Gantt obligatoria</strong>
+      El contrato exige un cronograma detallado en formato de <strong>carta Gantt</strong>. Adjunte el documento a continuación. Los datos levantados en terreno serán propiedad de ESVAL / Aguas del Valle.</div>
+
+    <div class="sub">Documento Carta Gantt</div>
+    <div class="ib"><strong>La carta Gantt debe contemplar las siguientes fases e hitos:</strong><br><br>
+      <strong>Fase I — Inicio y Planificación:</strong> Reunión de kick-off, entrega de insumos por parte de ESVAL, elaboración y aprobación del Plan de Trabajo con definición de áreas prioritarias.<br>
+      <strong>Fase II — Ejecución (por ciclo):</strong> Adquisición y procesamiento de fuentes de datos, restitución/digitalización de elementos cartográficos, carga y validación de información atributiva.<br>
+      <strong>Fase III — Control y Entrega Semestral (por ciclo):</strong> Protocolos QA/QC internos, generación del paquete FGDB incremental, revisión de ESVAL, corrección de observaciones, aprobación y acta de recepción.<br>
+      <strong>Fase IV — Cierre:</strong> Entrega final consolidada, informe final de actividades y lecciones aprendidas, reunión de cierre y firma del Acta de Recepción Conforme.<br><br>
+      El cronograma debe identificar para cada período las localidades (comunas) que ingresarán a proceso, garantizando que la totalidad sea actualizada al menos una vez por semestre.
+    </div>
+
+    <div class="f">
+      <label class="lbl">Carta Gantt (PDF, Excel o Project) <span class="req">*</span></label>
+      <div class="upload" onclick="document.getElementById('f_gantt').click()">
+        <input type="file" id="f_gantt" accept=".pdf,.xlsx,.xls,.mpp,.pptx"/>
+        <div class="up-ico">📊</div>
+        <div class="up-txt"><strong>Adjuntar Carta Gantt</strong><br>Debe incluir las 4 fases, los 2 ciclos semestrales y el calendario de localidades por período · PDF, XLSX, MPP · máx. 15 MB</div>
+        <div class="fname" id="fn-gantt"></div>
+      </div>
+      <div class="errmsg" id="e-gantt">Debe adjuntar la carta Gantt.</div>
+    </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SEC 8 · DOCUMENTOS
+══════════════════════════════════════════ -->
+<div class="card" id="sec8">
+  <div class="chdr"><div class="cico">📎</div>
+    <div><div class="ctitle">8. Documentos Adjuntos</div>
+    <div class="csub">Documentación de respaldo obligatoria y complementaria</div></div>
+  </div>
+  <div class="cbody">
+    <div class="wb"><strong>⚠ Documentos obligatorios</strong>
+      Los marcados con <span style="color:var(--red)">*</span> son exigidos para la evaluación. La propuesta metodológica se adjunta en la Sección 6 y la carta Gantt en la Sección 7. Adjunte aquí los certificados de experiencia y los demás respaldos de la empresa.</div>
+    <div class="g2">
+      <div class="f"><label class="lbl">Propuesta Técnica Completa (PDF) <span class="req">*</span></label>
+        <div class="upload" onclick="document.getElementById('f_propuesta').click()">
+          <input type="file" id="f_propuesta" accept=".pdf,.doc,.docx"/>
+          <div class="up-ico">📄</div>
+          <div class="up-txt"><strong>Adjuntar Propuesta Técnica</strong><br>PDF, DOC, DOCX · máx. 20 MB</div>
+          <div class="fname" id="fn-propuesta"></div>
+        </div></div>
+      <div class="f"><label class="lbl">Certificados de Experiencia Empresa — mín. 3 proyectos <span class="req">*</span></label>
+        <div class="upload" onclick="document.getElementById('f_cert').click()">
+          <input type="file" id="f_cert" accept=".pdf,.zip"/>
+          <div class="up-ico">🏅</div>
+          <div class="up-txt"><strong>Adjuntar Certificados</strong><br>Actas de recepción conforme · PDF o ZIP · máx. 20 MB</div>
+          <div class="fname" id="fn-cert"></div>
+        </div></div>
+      <div class="f"><label class="lbl">Declaración de Licencias de Software GIS</label>
+        <div class="upload" onclick="document.getElementById('f_sw').click()">
+          <input type="file" id="f_sw" accept=".pdf"/>
+          <div class="up-ico">💻</div>
+          <div class="up-txt"><strong>Adjuntar Declaración</strong><br>PDF · máx. 5 MB</div>
+          <div class="fname" id="fn-sw"></div>
+        </div></div>
+      <div class="f"><label class="lbl">Muestra de Trabajo Cartográfico Anterior (opcional)</label>
+        <div class="upload" onclick="document.getElementById('f_muestra').click()">
+          <input type="file" id="f_muestra" accept=".pdf,.zip"/>
+          <div class="up-ico">🗺</div>
+          <div class="up-txt"><strong>Adjuntar Muestra</strong><br>PDF o ZIP · máx. 30 MB</div>
+          <div class="fname" id="fn-muestra"></div>
+        </div></div>
+      <div class="f"><label class="lbl">Otros Documentos Complementarios (opcional)</label>
+        <div class="upload" onclick="document.getElementById('f_otros').click()">
+          <input type="file" id="f_otros" accept=".pdf,.zip"/>
+          <div class="up-ico">📁</div>
+          <div class="up-txt"><strong>Adjuntar Otros</strong><br>PDF o ZIP · máx. 20 MB</div>
+          <div class="fname" id="fn-otros"></div>
+        </div></div>
+    </div>
+    <p class="hint" style="margin-top:14px">Para archivos de mayor tamaño, envíelos al correo de licitaciones indicando el N° de referencia en el asunto.</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     SEC 9 · ENVÍO
+══════════════════════════════════════════ -->
+<div class="card" id="sec9">
+  <div class="chdr"><div class="cico">✅</div>
+    <div><div class="ctitle">9. Declaración y Envío</div>
+    <div class="csub">Confirme la veracidad de la información antes de enviar</div></div>
+  </div>
+  <div class="cbody">
+    <div class="ib" style="margin-bottom:20px"><strong>Verificación final antes de enviar:</strong>
+      ① Todos los campos obligatorios completos &nbsp;·&nbsp;
+      ② Los 5 profesionales clave con sus CVs adjuntos &nbsp;·&nbsp;
+      ③ Propuesta metodológica adjunta en Sección 6 &nbsp;·&nbsp;
+      ④ Carta Gantt adjunta en Sección 7 &nbsp;·&nbsp;
+      ⑤ Montos con IVA incluido &nbsp;·&nbsp;
+      ⑥ Certificados de experiencia adjuntos en Sección 8</div>
+    <label class="decl" id="decl-label">
+      <input type="checkbox" id="declaracion"/>
+      <div class="decl-box" id="decl-ui">✓</div>
+      <div class="decl-txt">
+        <strong>Declaración Jurada del Oferente</strong>
+        Declaro, en representación de la empresa indicada en este formulario, que toda la información proporcionada es verídica y completa. Acepto que ESVAL S.A. y Aguas del Valle S.A. podrán verificar los antecedentes entregados y contactarme en relación a esta licitación. Me comprometo a cumplir con todas las condiciones establecidas en el TDR de Actualización de Cartografía 2025 en caso de resultar adjudicado. Declaro además que la empresa y su personal propuesto no poseen conflictos de interés con las empresas mandantes.
+      </div>
+    </label>
+    <div class="errmsg" id="e-declaracion" style="margin-bottom:14px">Debe aceptar la declaración para continuar.</div>
+    <button type="submit" class="btn-sub" id="btn-sub">Enviar Postulación</button>
+    <p style="text-align:center;margin-top:12px;font-size:12px;color:var(--muted)">Al enviar recibirá un correo de confirmación automático con su número de referencia único.</p>
+  </div>
+</div>
+
+</form>
+</main>
+
+<footer>
+  <p>ESVAL S.A. · Aguas del Valle S.A. — Licitación Actualización Cartografía Vectorial SIG 2025</p>
+  <p>Sistema GeoGota · ArcGIS Enterprise · EGDB Oracle 19c · Regiones de Valparaíso (V) y Coquimbo (IV)</p>
+  <p style="margin-top:6px;font-size:11px">CRS: WGS 1984 (EPSG:4326) · Escala ≤ 1:5.000 · Precisión RMSE ≤ 3 m · Metadatos ISO 19115 · Formato entrega: FGDB Esri</p>
+</footer>
+
+<script>
+const SCRIPT_URL = 'https://script.google.com/macros/s/PEGAR_URL_AQUI/exec';
+
+/* ── STICKY NAV ──────────────────────────────── */
+const SEC_IDS = ['sec1','sec2','sec3','sec4','sec5','sec6','sec7','sec8','sec9'];
+const NS_IDS  = ['ns1','ns2','ns3','ns4','ns5','ns6','ns7','ns8','ns9'];
+
+NS_IDS.forEach((nsId, idx) => {
+  document.getElementById(nsId).addEventListener('click', function(e){
+    e.preventDefault();
+    const target = document.getElementById(SEC_IDS[idx]);
+    if(!target) return;
+    const navH = document.getElementById('snav').offsetHeight;
+    const top  = target.getBoundingClientRect().top + window.pageYOffset - navH - 14;
+    window.scrollTo({ top, behavior:'smooth' });
+  });
+});
+
+function updateNav(){
+  const navH = document.getElementById('snav').offsetHeight;
+  const sy   = window.pageYOffset + navH + 40;
+  let active = 0;
+  SEC_IDS.forEach((id, i) => {
+    const el = document.getElementById(id);
+    if(el && el.offsetTop <= sy) active = i;
+  });
+  NS_IDS.forEach((id, i) => {
+    const el = document.getElementById(id);
+    if(!el) return;
+    el.classList.toggle('active', i === active);
+    el.classList.toggle('done',   i < active);
+    const nn = document.getElementById('nn'+(i+1));
+    if(nn) nn.textContent = i < active ? '✓' : i+1;
+  });
+}
+window.addEventListener('scroll', updateNav, { passive:true });
+updateNav();
+
+/* ── PILLS ───────────────────────────────────── */
+document.querySelectorAll('.pill').forEach(pill => {
+  const inp = pill.querySelector('input');
+  if(!inp) return;
+  inp.addEventListener('change', () => {
+    if(inp.type === 'radio')
+      document.querySelectorAll(`input[name="${inp.name}"]`).forEach(r => r.closest('.pill').classList.remove('on'));
+    pill.classList.toggle('on', inp.checked);
+  });
+});
+
+/* ── DECLARATION ─────────────────────────────── */
+document.getElementById('decl-label').addEventListener('click', function(){
+  const cb = document.getElementById('declaracion');
+  cb.checked = !cb.checked;
+  this.classList.toggle('on', cb.checked);
+});
+
+/* ── FILE NAMES ──────────────────────────────── */
+const allFiles = {
+  'f_cv_jp':'fn-cv_jp','f_cv_csig':'fn-cv_csig','f_cv_ec':'fn-cv_ec',
+  'f_cv_qaqc':'fn-cv_qaqc','f_cv_bd':'fn-cv_bd',
+  'f_metodologia':'fn-metodologia','f_gantt':'fn-gantt',
+  'f_propuesta':'fn-propuesta','f_cert':'fn-cert',
+  'f_sw':'fn-sw','f_muestra':'fn-muestra','f_otros':'fn-otros'
+};
+Object.entries(allFiles).forEach(([fid, nid]) => {
+  const el = document.getElementById(fid);
+  if(el) el.addEventListener('change', function(){
+    const n = document.getElementById(nid);
+    if(this.files[0]){ n.textContent = '✓ '+this.files[0].name; n.style.display='block'; }
+  });
+});
+
+/* ── OTROS TOGGLES ───────────────────────────── */
+function bindOtros(cbId, txtId){
+  const cb = document.getElementById(cbId);
+  const tx = document.getElementById(txtId);
+  if(!cb||!tx) return;
+  cb.addEventListener('change', () => {
+    tx.style.display = cb.checked ? 'block' : 'none';
+    if(!cb.checked) tx.value = '';
+  });
+}
+bindOtros('cb-otras-plat', 'otras_plat_txt');
+bindOtros('cb-fuentes-otros', 'fuentes_otros_txt');
+
+
+document.getElementById('rut_empresa').addEventListener('input', function(){
+  let v = this.value.replace(/[^0-9kK]/g,'');
+  if(v.length > 1) v = v.slice(0,-1)+'-'+v.slice(-1);
+  this.value = v;
+});
+const validRut = rut => /^\d{7,8}-[\dkK]$/.test(rut.replace(/\./g,''));
+
+/* ── MONTO FORMAT + AUTO SEMESTRAL ───────────── */
+['monto_base','monto_poi','monto_gcs','monto_cnivel'].forEach(id => {
+  document.getElementById(id).addEventListener('input', function(){
+    const raw = this.value.replace(/\D/g,'');
+    this.value = raw ? parseInt(raw).toLocaleString('es-CL') : '';
+    if(id === 'monto_base'){
+      const n = parseInt(raw||0);
+      document.getElementById('monto_semestral').value = n ? Math.round(n/2).toLocaleString('es-CL') : '';
+    }
+  });
+});
+
+/* ── ADD EXTRA PERSONNEL ────────────────────── */
+let extraCount = 0;
+document.getElementById('btn-add-pers').addEventListener('click', function(){
+  extraCount++;
+  const idx = extraCount;
+  const wrap = document.getElementById('extra-pers-wrap');
+  const div = document.createElement('div');
+  div.className = 'pcard';
+  div.id = 'extra-pers-'+idx;
+  div.style.marginBottom = '14px';
+  div.innerHTML = `
+    <h4>👤 Profesional Adicional ${idx}
+      <button type="button" class="btn-remove" onclick="removeExtra(${idx})" title="Eliminar">✕</button>
+    </h4>
+    <div class="f"><label class="lbl">Cargo / Rol propuesto</label>
+      <input type="text" id="ext${idx}_cargo" placeholder="Ej: Analista SIG, Técnico en Geodesia..."/></div>
+    <div class="g2" style="margin-top:10px">
+      <div class="f"><label class="lbl">Nombre completo</label>
+        <input type="text" id="ext${idx}_nombre" placeholder="Nombre y Apellido"/></div>
+      <div class="f"><label class="lbl">Profesión / Título</label>
+        <input type="text" id="ext${idx}_prof" placeholder="Profesión"/></div>
+    </div>
+    <div class="f mt"><label class="lbl">CV del profesional (PDF)</label>
+      <div class="upload" onclick="document.getElementById('f_cv_ext${idx}').click()">
+        <input type="file" id="f_cv_ext${idx}" accept=".pdf"/>
+        <div class="up-ico">📄</div>
+        <div class="up-txt"><strong>Adjuntar CV</strong> · PDF · máx. 5 MB</div>
+        <div class="fname" id="fn-cv_ext${idx}"></div>
+      </div></div>`;
+  // bind file input
+  div.querySelector(`#f_cv_ext${idx}`).addEventListener('change', function(){
+    const n = document.getElementById(`fn-cv_ext${idx}`);
+    if(this.files[0]){ n.textContent = '✓ '+this.files[0].name; n.style.display='block'; }
+  });
+  wrap.appendChild(div);
+  // also bind new pills if any
+  div.querySelectorAll('.pill').forEach(pill => {
+    const inp = pill.querySelector('input');
+    if(!inp) return;
+    inp.addEventListener('change', () => {
+      if(inp.type==='radio') document.querySelectorAll(`input[name="${inp.name}"]`).forEach(r=>r.closest('.pill').classList.remove('on'));
+      pill.classList.toggle('on', inp.checked);
+    });
+  });
+});
+function removeExtra(idx){
+  const el = document.getElementById('extra-pers-'+idx);
+  if(el) el.remove();
+}
+
+/* ── VALIDATION ─────────────────────────────── */
+function setErr(id, show){
+  const e = document.getElementById('e-'+id);
+  const f = document.getElementById(id);
+  if(e) e.classList.toggle('show', show);
+  if(f) f.classList.toggle('err',  show);
+}
+function clearErrors(){
+  document.querySelectorAll('.errmsg').forEach(e => e.classList.remove('show'));
+  document.querySelectorAll('.err').forEach(e => e.classList.remove('err'));
+}
+const getRadio   = name => document.querySelector(`input[name="${name}"]:checked`)?.value||'';
+const getChecked = name => [...document.querySelectorAll(`input[name="${name}"]:checked`)].map(c=>c.value).join(', ');
+
+function validate(){
+  clearErrors();
+  let ok = true;
+  const req = (id, test) => { if(!test){ setErr(id,true); ok=false; } };
+
+  // Sec 1
+  req('razon_social', document.getElementById('razon_social').value.trim());
+  req('rut_empresa',  validRut(document.getElementById('rut_empresa').value));
+  req('giro',         document.getElementById('giro').value.trim());
+  req('direccion',    document.getElementById('direccion').value.trim());
+  req('ciudad',       document.getElementById('ciudad').value.trim());
+  req('region',       document.getElementById('region').value);
+  // Sec 2
+  req('nombre_contacto', document.getElementById('nombre_contacto').value.trim());
+  req('cargo',           document.getElementById('cargo').value.trim());
+  req('email',           /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(document.getElementById('email').value.trim()));
+  req('telefono',        document.getElementById('telefono').value.trim());
+  // Sec 3
+  req('anos_exp',       document.getElementById('anos_exp').value);
+  req('cant_proyectos', document.getElementById('cant_proyectos').value);
+  req('proyectos_rel',  document.getElementById('proyectos_rel').value.trim().length >= 150);
+  req('exp_arcgis',     getRadio('exp_arcgis'));
+  req('fuentes',        getChecked('fuentes'));
+  req('exp_arcpy',      getRadio('exp_arcpy'));
+  req('sw_gis',         getChecked('sw_gis'));
+  // Sec 4 – nombres obligatorios
+  ['jp_nombre','csig_nombre','ec_nombre','qaqc_nombre','bd_nombre'].forEach(id => req(id, document.getElementById(id).value.trim()));
+  // Sec 5
+  req('monto_base',    document.getElementById('monto_base').value.trim());
+  req('cap_manzanas',  document.getElementById('cap_manzanas').value);
+  req('plazo',         document.getElementById('plazo').value);
+  req('cotiza_poi',    getRadio('cotiza_poi'));
+  req('cotiza_gcs',    getRadio('cotiza_gcs'));
+  req('cotiza_cnivel', getRadio('cotiza_cnivel'));
+  // Sec 6 – methodology doc upload
+  const metaFile = document.getElementById('f_metodologia');
+  if(!metaFile || !metaFile.files || metaFile.files.length === 0){
+    setErr('metodologia', true); ok = false;
+  }
+  // Sec 7 – gantt upload
+  const ganttFile = document.getElementById('f_gantt');
+  if(!ganttFile || !ganttFile.files || ganttFile.files.length === 0){
+    setErr('gantt', true); ok = false;
+  }
+  // Sec 9
+  if(!document.getElementById('declaracion').checked){
+    document.getElementById('e-declaracion').classList.add('show'); ok = false;
+  }
+  return ok;
+}
+
+/* ── SUBMIT ──────────────────────────────────── */
+document.getElementById('form').addEventListener('submit', async function(e){
+  e.preventDefault();
+  if(!validate()){
+    const first = document.querySelector('.err, .errmsg.show');
+    if(first) first.scrollIntoView({ behavior:'smooth', block:'center' });
+    return;
+  }
+  const btn = document.getElementById('btn-sub');
+  btn.disabled = true;
+  btn.innerHTML = '<span class="spin"></span>Enviando postulación...';
+
+  const cl = id => document.getElementById(id)?.value.trim()||'';
+  const mn = id => cl(id).replace(/\./g,'');
+
+  const chrono = ['f1','f2a','f3a','f2b','f3b','f4'].map(p =>
+    ({ fase:p, ini:cl(p+'_ini'), fin:cl(p+'_fin'), obs:cl(p+'_obs') }));
+
+  // collect extra personnel
+  const extras = [];
+  document.querySelectorAll('[id^="extra-pers-"]').forEach(div => {
+    const idx = div.id.split('-')[2];
+    extras.push({ cargo:cl('ext'+idx+'_cargo'), nombre:cl('ext'+idx+'_nombre'), prof:cl('ext'+idx+'_prof') });
+  });
+
+  const payload = {
+    timestamp:      new Date().toLocaleString('es-CL',{timeZone:'America/Santiago'}),
+    razon_social:   cl('razon_social'), rut_empresa:cl('rut_empresa'),
+    giro:           cl('giro'), direccion:cl('direccion'), ciudad:cl('ciudad'),
+    region:         cl('region'), tamano:cl('tamano'), web:cl('web'),
+    nombre_contacto:cl('nombre_contacto'), cargo:cl('cargo'),
+    email:          cl('email'), email_alt:cl('email_alt'),
+    telefono:       cl('telefono'), telefono_alt:cl('telefono_alt'),
+    anos_exp:       cl('anos_exp'), cant_proyectos:cl('cant_proyectos'),
+    proyectos_rel:  cl('proyectos_rel'),
+    exp_arcgis:     getRadio('exp_arcgis'), otras_plat:getChecked('otras_plat'),
+    fuentes:        getChecked('fuentes'), exp_fotog:getRadio('exp_fotog'),
+    exp_arcpy:      getRadio('exp_arcpy'), exp_oracle:getRadio('exp_oracle'),
+    exp_util:       getRadio('exp_util'), sw_gis:getChecked('sw_gis'),
+    jp_nombre:      cl('jp_nombre'), jp_prof:cl('jp_prof'), jp_exp:cl('jp_exp'),
+    csig_nombre:    cl('csig_nombre'), csig_prof:cl('csig_prof'), csig_exp:cl('csig_exp'),
+    ec_nombre:      cl('ec_nombre'), ec_prof:cl('ec_prof'), ec_exp:cl('ec_exp'),
+    qaqc_nombre:    cl('qaqc_nombre'), qaqc_prof:cl('qaqc_prof'), qaqc_exp:cl('qaqc_exp'),
+    bd_nombre:      cl('bd_nombre'), bd_prof:cl('bd_prof'), bd_exp:cl('bd_exp'), bd_python:getRadio('bd_python'),
+    personal_adicional: JSON.stringify(extras),
+    monto_base:     mn('monto_base'), monto_semestral:mn('monto_semestral'),
+    cap_manzanas:   cl('cap_manzanas'), plazo:cl('plazo'),
+    cotiza_poi:     getRadio('cotiza_poi'), monto_poi:mn('monto_poi'),
+    cotiza_gcs:     getRadio('cotiza_gcs'), monto_gcs:mn('monto_gcs'),
+    cotiza_cnivel:  getRadio('cotiza_cnivel'), monto_cnivel:mn('monto_cnivel'),
+    obs_oferta:     cl('obs_oferta'),
+    fuente_primaria:     cl('fuente_primaria'),
+    edicion_carto:       cl('edicion_carto'),
+    qaqc_plan:           cl('qaqc_plan'),
+    script_desc:         cl('script_desc'),
+    cronograma:          JSON.stringify(chrono),
+    calendario:          cl('calendario'),
+  };
+
+  try {
+    const res  = await fetch(SCRIPT_URL, { method:'POST', body:JSON.stringify(payload) });
+    const data = await res.json();
+    if(data.result === 'success'){
+      document.getElementById('form').style.display = 'none';
+      document.getElementById('success').style.display = 'block';
+      document.getElementById('suc-ref').textContent = 'N° de Referencia: '+(data.ref||'ESVAL-CART-'+Date.now().toString().slice(-6));
+      window.scrollTo({ top:0, behavior:'smooth' });
+    } else throw new Error(data.error||'Error desconocido');
+  } catch(err){
+    console.error(err);
+    alert('Error al enviar el formulario. Intente nuevamente o contacte a licitaciones@esval.cl\n\nDetalle: '+err.message);
+    btn.disabled = false;
+    btn.innerHTML = 'Enviar Postulación';
+  }
+});
+</script>
+</body>
+</html>
